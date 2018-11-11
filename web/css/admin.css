@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    /*color: blue;*/
+    text-decoration: none
+}
+
+a:visited {
+    /*color: blue;*/
+    text-decoration: none
+}
+
+a:hover {
+    /*color: blue;*/
+    text-decoration: underline
+}
+
+a:active {
+    /*color: blue;*/
+    text-decoration: none
+}
+
+#head{
+
+}
+#head h1{
+    display: inline;
+}
+#head a{
+    font-size: 22px;
+    margin-left: 35px;
+}
+/*音乐列表*/
+#musicList{
+    width: 200px;
+    margin-left: 20px;
+}
+
+#musicList ul{
+    list-style: none;
+    width: 200px;
+    margin-left: 20px;
+}
+#musicList a{
+    font-size: 17px;
+}
+#musicList span{
+    margin-top: 7px;
+    margin-left: 10px;
+}
+#musicList ul li{
+    font-size: 17px;
+    margin-top: 7px;
+    margin-bottom: -8px;
+    width: 350px;
+}
+#checkbox{
+    margin-top: 12px;
+    float: right;
+}
+/*遮罩层*/
+#screen{
+    font-size: 120px;
+    text-align: center;
+    width: 10000px;
+    height: 10000px;
+    background: #CCCCCC;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    z-index: 997;
+    display: none;
+}

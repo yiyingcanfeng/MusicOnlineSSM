@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zxy.dao.MusicMapper">
+    <resultMap id="BaseResultMap" type="com.zxy.model.Music">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="location" property="location" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <select id="getAllMusic" resultMap="BaseResultMap">
+        select * from music
+    </select>
+
+
+    <select id="isExist" resultType="java.lang.Integer" parameterType="com.zxy.model.Music">
+        select count(*) from music where name=#{name}
+    </select>
+
+
+    <insert id="insert" parameterType="com.zxy.model.Music">
+        <selectKey keyProperty="id" resultType="Integer">
+            select last_insert_id();
+        </selectKey>
+        insert into music (name, location) VALUES (#{name},#{location})
+    </insert>
+
+
+    <delete id="deleteMusic" parameterType="com.zxy.model.Music">
+        delete from music where name=#{name}
+    </delete>
+
+</mapper>

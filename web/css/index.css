@@ -1,0 +1,109 @@
+body {
+    background: #9acde2
+    /*background: #444 url(../img/bg.jpg) repeat 0 0 scroll;*/
+}
+
+a:link {
+    /*color: blue;*/
+    text-decoration: none
+}
+
+a:visited {
+    /*color: blue;*/
+    text-decoration: none
+}
+
+a:hover {
+    /*color: blue;*/
+    text-decoration: underline
+}
+
+a:active {
+    /*color: blue;*/
+    text-decoration: none
+}
+#user{
+    z-index: 5000;
+    position: absolute;
+    font-size: 30px;
+}
+
+#logo {
+    width: 100px;
+    height: 45px;
+    margin: 0 auto;
+    position: relative;
+}
+#font1{
+    position: absolute;
+    left: -90px;
+    top: 18px;
+}
+#logo-img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+#font2{
+    position: absolute;
+    left: 65px;
+    top: 22px;
+}
+
+a{
+    color: blue;
+    cursor: pointer;
+    margin-left: 5px;
+}
+/*音乐列表*/
+#musicList{
+    width: 600px;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+#musicList ul{
+    list-style: none;
+    width: 600px;
+    margin-left: 20px;
+}
+#musicList a{
+    float: left;
+}
+#musicList span{
+    margin-left: 10px;
+}
+#musicList ul li{
+    margin-top: 7px;
+    margin-bottom: -8px;
+    width: 600px;
+}
+#musicName{
+    position: absolute;
+    font-size: 24px;
+}
+#audio{
+    position: absolute;
+    width: 500px;
+}
+/*遮罩层*/
+/*#screen{*/
+    /*font-size: 120px;*/
+    /*text-align: center;*/
+    /*width: 1000px;*/
+    /*height: 1500px;*/
+    /*!*background: #CCCCCC;*!*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*!*opacity:0.3;*!*/
+    /*!*filter: alpha(opacity=30);*!*/
+    /*z-index: 997;*/
+    /*display: none;*/
+/*}*/
+#wrapper{
+    z-index: 998;
+    position: absolute;
+    left: 400px;
+    top: 300px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<#assign contextPath="" />
+<html>
+<head>
+    <title>在线音乐</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="${contextPath}/js/jquery-3.2.1.min.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="${contextPath}/css/index.css">
+    <script src="${contextPath}/js/myJS.js"></script>
+    <script src="${contextPath}/js/index.js"></script>
+</head>
+<body>
+
+<div id="user" class="container">
+    <a href="${contextPath}/music/login" id="login" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-log-in"></span> 登陆</a>
+    <a href="${contextPath}/music/register" id="register" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-log-in"></span> 注册</a>
+    <a href="${contextPath}/music/logout" id="logout" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-log-out"></span> 注销</a>
+    欢迎你：<span id="welcome">
+    </span>
+</div>
+<div id="musicList">
+    <ul class="list-group">
+    </ul>
+</div>
+<div id="musicName">陈粒 - 易燃易爆炸</div>
+<audio id="audio" src="${contextPath}/music/陈粒 - 易燃易爆炸.mp3" controlslist="nodownload" controls="controls"></audio>
+<div id="screen"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<#assign contextPath="" />
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="${contextPath}/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="${contextPath}/css/register.css">
+    <script type="text/javascript" src="${contextPath}/js/register.js"></script>
+    <script type="text/javascript" src="${contextPath}/js/myJS.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="register">
+    <div id="logo"><a href="index.jsp">
+        <img src="${contextPath}/img/font1.jpg" id="font1">
+        <img src="${contextPath}/img/logo.jpg" id="logo-img" >
+        <img src="${contextPath}/img/font2.jpg" id="font2"></a>
+    </div>
+    <form action="#" method="post" id="form1">
+        <div>
+            <div id="username-div" class="div-default">
+                <span>用户名</span>
+                <input id="username" type="text" name="username" required  autocomplete="off" maxlength="16" minlength="4" placeholder="4-16位字符" onfocus="changeStyle('username-div')">
+            </div>
+            <span class="msg">aaaaaaaaa</span>
+        </div>
+        <div>
+            <div id="password-div" class="div-default">
+                <span>密码</span>
+                <input id="password" type="password" placeholder="4-16位数字、字母或下划线" name="password" autocomplete="off" required maxlength="16" minlength="4" onfocus="changeStyle('password-div')" onblur="restoreStyle('password-div')">
+            </div>
+            <span class="msg">aaaaaaaaa</span>
+        </div>
+        <div>
+            <div id="re-div" class="div-default">
+                <span>确认</span>
+                <input id="re" type="password" placeholder="再次输入密码" name="rePassword" required maxlength="16" minlength="4"  onfocus="changeStyle('re-div')" onblur="restoreStyle('re-div')">
+            </div>
+            <span class="msg">aaaaaaaaa</span>
+        </div>
+        <div>
+            <div id="email-div" class="div-default">
+                <span>邮箱</span>
+                <input type="text" name="email" id="email" placeholder="输入你的邮箱" required onfocus="changeStyle('email-div')" onblur="restoreStyle('email-div')">
+            </div>
+            <span class="msg">aaaaaaaaa</span>
+        </div>
+        <div id="agree-div">
+            <p><input type="checkbox" id="checkbox" class="icon-check-empty" style="width: 14px;height: 14px;position: relative;top: 2px;"><label for="checkbox">&nbsp;我已阅读并同意</label><a href="https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E5%8D%8F%E8%AE%AE/14485933" target="_blank">《用户协议》</a></p>
+        </div>
+        <input type="button" id="submit" class="submit-disabled" value="注册" >
+
+    </form>
+</div>
+</body>
+</html>

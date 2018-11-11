@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+       					   http://www.springframework.org/schema/aop
+       					   http://www.springframework.org/schema/aop/spring-aop.xsd
+       					   http://www.springframework.org/schema/tx
+       					   http://www.springframework.org/schema/tx/spring-tx.xsd
+       					   http://www.springframework.org/schema/mvc
+       					   http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <context:component-scan base-package="com.zxy"/>
+
+    <!--解决@ResponseBody注解返回中文乱码-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" >
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/plain;charset=utf-8</value>
+                            <value>text/html;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <mvc:annotation-driven >
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter" /> <!--先进行string转换-->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+    <!-- 配置freemarker模版文件前缀，模版文件编码 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/view/"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+    <!-- 配置freemarker视图解析后缀，页面显示视图编码 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
+        <property name="suffix" value=".html"/>
+        <property name="contentType" value="text/html;charset=utf-8"/>
+    </bean>
+
+    <!--配置文件上传解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1024000000000"/>
+    </bean>
+
+    <!--静态资源映射-->
+    <mvc:resources mapping="/img/*" location="/img/"/>
+    <mvc:resources mapping="/js/*" location="/js/"/>
+    <mvc:resources mapping="/css/*" location="/css/"/>
+    <mvc:resources mapping="/music/*" location="/music/"/>
+    <mvc:resources mapping="/fonts/*" location="/fonts/"/>
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/admin"/>
+            <bean class="com.zxy.Interceptor.AdminInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/music/*.mp3"/>
+            <bean class="com.zxy.Interceptor.MusicInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--
+    Spring的Bean扫描和Spring-MVC的Bean扫描是分开的,
+    两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描,
+    所以当Controller Bean生成完成后, 再执行Spring的Bean扫描,
+    Spring会发现要被AOP代理的Controller Bean已经在容器中存在, 配置AOP就无效了.
+    解决方法：
+    1.在spring-mvc配置文件中配置aop拦截controller
+    2.在spring配置文件中配置aop拦截controller，在spring-mvc配置文件中引入spring配置文件
+    -->
+    <import resource="beans.xml"/>
+</beans>

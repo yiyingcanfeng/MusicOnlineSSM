@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<#assign contextPath="" />
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 包括所有已编译的插件 -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="${contextPath}/js/myJS.js"></script>
+    <script src="${contextPath}/js/jquery-3.2.1.min.js"></script>
+    <script src="${contextPath}/js/admin.js"></script>
+    <link rel="stylesheet" href="${contextPath}/css/admin.css">
+</head>
+<body>
+<div id="head">
+    <h1>后台管理</h1>
+    <a href="${contextPath}/music/index">首页</a>
+    <span></span><a href="${contextPath}/music/logout">注销</a>
+</div>
+<div id="upload">
+    <form action="Upload" id="form1" method="post" enctype="multipart/form-data">
+        <input class="btn btn-default" type="file" id="file1" name="file1" accept="audio/mpeg"  multiple>
+        <input class="btn btn-default" type="button" value="上传" onclick="upload()">
+        <input class="btn btn-default" type="button" value="更新数据库" onclick="update()">
+    </form>
+</div>
+<div id="screen">文件上传中</div>
+<div id="musicList">
+    <ul class="list-group">
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.form.min.js" type="text/javascript"></script>
+    <script>
+        function upload() {
+            var option={
+                type:'POST',
+                url:'/music/uploadMusic',
+                dataType:'text',
+                data:{
+                    fileName : 'test1'
+                }
+            };
+
+            $("#test").ajaxSubmit(option);
+        }
+    </script>
+</head>
+<body>
+<form id="test" onclick="">
+    <input type="file" onchange="upload()" multiple id="test1" name="test1">
+</form>
+</body>
+</html>

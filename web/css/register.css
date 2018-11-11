@@ -1,0 +1,217 @@
+*{margin: 0;padding: 0}
+a:link {color: blue;text-decoration: none}
+a:visited {color: blue;text-decoration: none}
+a:hover {color: blue;text-decoration: underline}
+a:active {color: blue;text-decoration: none}
+body{
+    /*background: url("../img/bg3.jpg");*/
+    background: #f4f4f4;
+}
+
+/*logo*/
+#logo {
+    width: 100px;
+    height: 45px;
+    margin: 0 auto;
+    position: relative;
+}
+#font1{
+    position: absolute;
+    left: -90px;
+    top: 28px;
+}
+#logo-img{
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+}
+#font2{
+    position: absolute;
+    left: 65px;
+    top: 32px;
+}
+
+
+#register{
+    height: 520px;
+    width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+#register form{
+    margin-left: 220px;
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
+}
+/*******div*********/
+#username-div{
+    width: 300px;
+    height: 50px;
+    /*border: solid 1px #ccc;*/
+    border-radius: 4px;
+}
+#password-div{
+    width: 300px;
+    height: 50px;
+    /*border: solid 1px #ccc;*/
+    border-radius: 4px;
+}
+#re-div{
+    width: 300px;
+    height: 50px;
+    /*border: solid 1px #ccc;*/
+    border-radius: 4px;
+}
+#email-div{
+    width: 300px;
+    height: 50px;
+    /*border: solid 1px #ccc;*/
+    border-radius: 4px;
+}
+#birthday-div{
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+}
+#errorMsg-div{
+    visibility: hidden;
+    width: 300px;
+    height: 18px;
+    margin-top: 10px;
+}
+#errorMsg-div img{
+    margin-left: 10px;
+}
+#agree-div{
+    width: 300px;
+    font-size: 14px;
+    height: 20px;
+    margin-top: 10px;
+}
+/*提示信息*/
+.msg{
+    visibility: hidden;
+    background: url(../img/error.png) no-repeat 4px center;
+    position: relative;
+    font-size: 14px;
+    top: -40px;
+    padding-left: 20px;
+    padding-bottom: 1px;
+    left: 315px;
+}
+
+
+
+/*********span***************/
+#username-div span{
+    float: left;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top: 13px;
+}
+#password-div span{
+    font-size: 16px;
+    letter-spacing: 15px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 13px;
+}
+#re-div span{
+    font-size: 16px;
+    letter-spacing: 15px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 13px;
+}
+#email-div span{
+    font-size: 16px;
+    letter-spacing: 15px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 13px;
+}
+/***************************/
+#username{
+    height: 48px;
+    font-size: 14px;
+    float: left;
+    margin-left: 20px;
+    outline: none;
+    border:none;
+    /*background: #fdf9ee;*/
+}
+#username::-webkit-input-placeholder{
+    font-size: 12px;
+}
+#password{
+    /*background: #fdf9ee;*/
+    height: 48px;
+    font-size: 14px;
+    float: left;
+    margin-left: 4px;
+    outline: none;
+    border:none;
+}
+#password::-webkit-input-placeholder{
+    font-size: 12px;
+}
+#re{
+    /*background: #fdf9ee;*/
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    float: left;
+    margin-left: 4px;
+    outline: none;
+    border:none;
+}
+#re::-webkit-input-placeholder{
+    font-size: 12px;
+}
+#email{
+    /*background: #fdf9ee;*/
+    height: 48px;
+    font-size: 14px;
+    float: left;
+    margin-left: 4px;
+    outline: none;
+    border:none;
+}
+#email::-webkit-input-placeholder{
+    font-size: 12px;
+}
+.div-default{
+    border: solid 1px #ccc;
+}
+.div-change{
+    border: solid 1px #00BBDD;
+}
+
+.submit-disabled{
+    width: 300px;
+    height: 38px;
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 16px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    color: #DDD;
+    background: none;
+}
+.submit{
+    width: 300px;
+    height: 38px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 16px;
+    border: 1px solid #0BD;
+    border-radius: 4px;
+    color: #0BD;
+    background: none;
+}
+/**************************/

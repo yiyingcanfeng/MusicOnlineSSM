@@ -1,0 +1,178 @@
+*{margin: 0;padding: 0;}
+body {
+    background-image: url("../img/bg1.jpg");
+}
+
+a:link {
+    color: blue;
+    text-decoration: none
+}
+
+a:visited {
+    color: blue;
+    text-decoration: none
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline
+}
+
+a:active {
+    color: blue;
+    text-decoration: none
+}
+a{
+    color: #fbfff1;
+}
+#login {
+    color: #fbfff1;
+    background: #ffffff;
+    padding-top: 8px;
+    margin-top: 100px;
+    width: 320px;
+    height: 350px;
+    margin-left: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#logo {
+    width: 100px;
+    height: 45px;
+    margin: 0 auto;
+    position: relative;
+}
+#font1{
+    position: absolute;
+    left: -90px;
+    top: 18px;
+}
+#logo-img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+#font2{
+    position: absolute;
+    left: 65px;
+    top: 22px;
+}
+/**********************/
+#login form{
+    margin-top: 20px;
+}
+
+#username {
+    border-radius: 4px;
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    font-size: 16px;
+    border: solid 1px #CCC;
+    padding-left: 40px;
+    background: url(../img/icon_account.png) no-repeat 10px 12px;
+}
+
+#username:focus {
+    background: url(../img/icon_account-blue.png)  no-repeat 10px 14px;
+    border: solid 1px #00BBDD;
+}
+
+#username::-webkit-input-placeholder{
+    font-size: 12px;
+}
+
+#password {
+    border-radius: 4px;
+    width: 250px;
+    height: 38px;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    font-size: 16px;
+    border: solid 1px #CCC;
+    padding-left: 40px;
+    background:url("../img/icon-lock.png") no-repeat 10px 10px;
+}
+
+#password:focus {
+    background:url(../img/icon-lock-blue.png) no-repeat 10px 10px;
+    border-color: #00BBDD;
+}
+
+#password::-webkit-input-placeholder{
+    font-size: 12px;
+}
+
+#yzm {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+}
+
+#code {
+    border: solid 1px #CCC;
+    width: 70px;
+    height: 38px;
+    margin-left: 12px;
+    padding-left: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    background:url("../img/icon-lock.png") no-repeat 10px 10px;
+}
+#code:focus {
+    background:url(../img/icon-lock-blue.png) no-repeat 10px 10px;
+    border-color: #00BBDD;
+}
+#code::-webkit-input-placeholder{
+    font-size: 12px;
+}
+#codeImg {
+    position: absolute;
+    width: 120px;
+    left: 127px;
+    top: 2px;
+    cursor: pointer;
+}
+#yzm a{
+    margin-left: 118px;
+    font-size: 14px;
+    margin-top: 16px;
+    display: block;
+    float: right;
+    margin-right: 8px
+}
+
+#submit {
+    border-radius: 4px;
+    width: 290px;
+    height: 38px;
+    margin-top: 25px;
+    margin-left: 12px;
+    font-size: 16px;
+    line-height: 16px;
+    border: 1px solid #0BD;
+    color: #0BD;
+    background: none;
+}
+
+
+#error {
+    visibility: hidden;
+    height: 26px;
+    margin-top: 15px;
+    margin-left: 9px;
+    background: url("../img/error.png") no-repeat 25px 2px;
+}
+
+#error span {
+    display: block;
+    color: red;
+    font-size: 14px;
+    font-family: "YaHei Consolas Hybrid", serif;
+    float: left;
+    margin-top: 1px;
+    margin-left: 45px;
+}
